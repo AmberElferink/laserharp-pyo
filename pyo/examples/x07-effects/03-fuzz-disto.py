@@ -15,6 +15,14 @@ Degrade object applies some kind of distortion to a signal by changing
 its sampling rate and bit depth. 
 
 """
+import os
+
+# Get the directory of the current script
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Change working directory to the script folder
+os.chdir(script_dir)
+
 from pyo import *
 
 s = Server(duplex=0).boot()

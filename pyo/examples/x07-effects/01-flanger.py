@@ -11,6 +11,14 @@ down the frequency spectrum.
 """
 from pyo import *
 
+import os
+
+# Get the directory of the current script
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Change working directory to the script folder
+os.chdir(script_dir)
+
 s = Server().boot()
 
 # Rich frequency spectrum as stereo input source.
